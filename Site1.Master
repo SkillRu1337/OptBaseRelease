@@ -1,0 +1,48 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="OptBaseNew.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оптовая база</title>
+    <link rel="stylesheet" type="text/css" href="/Graphics/Main.css" />
+    <script src="/Scripts/jquery-3.7.1.min.js"></script>
+    <script src="/Scripts/jquery.inputmask.min.js"></script>
+    <script src="/Scripts/AjaxForms.js"></script>
+    <script src="/Scripts/GlobalScript.js"></script>
+    <asp:ContentPlaceHolder ID="Head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <header>
+        <div class="container container-menu">
+            <div class="menu">
+                <ul>
+                    <li><a href="/Index.aspx">Справочник материалов</a></li>
+                    <li><a href="/Wholesalers.aspx">Справочник оптовиков</a></li>
+                    <li><a href="/Shipment.aspx">Отгрузка материалов</a></li>
+                    <li><a href="/Acceptance.aspx">Приемка материалов</a></li>
+                    <li><a href="/Remnant.aspx">Просмотр остатков</a></li>
+                    <li><a href="/Archive.aspx">Архив операций</a></li>
+                </ul>
+            </div>
+            <div class="user-info">
+                <span>
+                    <asp:Label ID="UserLabel" runat="server"></asp:Label>
+                </span>
+            </div>
+        </div>
+    </header>
+    <div class="main-content container">
+        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    <footer>
+        <div class="container">
+            &copy; 2024 Оптовая база (ТП, ЗИСТд-121, Чухин В.С.). Все права защищены.
+        </div>
+    </footer>
+</body>
+</html>

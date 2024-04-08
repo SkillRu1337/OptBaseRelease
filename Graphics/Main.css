@@ -1,0 +1,339 @@
+/* Основное */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #b1dcfc;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 20px;
+    color: #007399;
+    font-weight: normal;
+    padding-bottom: 15px;
+    margin: 0;
+}
+
+h2 {
+    color: #007399;
+}
+
+/* Предупреждение об отсутствии прав на просмотр */
+.warning-container {
+    text-align: center;
+}
+
+.warning {
+    display: inline-block;
+    font-size: 20px;
+    color: #007399;
+    font-weight: bold;
+    padding: 50px;
+}
+
+/* Страница авторизации */
+.auth-info {
+    text-align: center;
+}
+
+.auth-table {
+    padding: 20px 0;
+    margin: 0 auto;
+    border: 3px solid #0099cc;
+    width: 600px;
+    background: #ace7f2;
+}
+
+.auth-table td {
+    border-bottom: 5px solid transparent;
+}
+
+.auth-lefttext {
+    text-align: right;
+    width: 230px;
+}
+
+.auth-errormsg {
+    color: #db2f2f;
+    text-align: center;
+    font-size: 18px;
+}
+
+/* Шапка */
+header {
+    background-color: #0099cc;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    position: fixed; /* Зафиксируем шапку наверху */
+    width: 100%;
+    top: 0;
+    z-index: 1000; /* Установим высокий z-index, чтобы шапка была поверх других элементов */
+}
+
+/* Меню вверху страницы */
+.container-menu {
+    display: flex;
+    justify-content: space-between; /* Распределение элементов по ширине контейнера */
+    align-items: center; /* Выравнивание элементов по вертикали */
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.menu {
+    flex-shrink: 0; /* Запрет сжатия блока .menu */
+}
+
+.menu ul li {
+    margin-right: 20px;
+    position: relative;
+}
+
+.menu ul li:last-child {
+    margin-right: 0;
+}
+
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.menu ul li a:hover {
+    color: #b1dcfc;
+}
+
+.menu ul li:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -10px;
+    transform: translateY(-50%);
+    height: 20px;
+    width: 1px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.menu ul li:last-child:after {
+    display: none;
+}
+
+
+/* Инфа о пользователе справа от меню */
+.user-info {
+    color: white;
+}
+.user-info span {
+    margin-right: 20px;
+}
+
+.user-info a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.user-info a:hover {
+    color: #b1dcfc;
+}
+
+/* Основное содержимое */
+.main-content {
+    padding: 100px 0 100px;
+}
+
+/* Футер */
+footer {
+    background-color: #0099cc;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Справочник материалов */
+#materialContainer table {
+    width: 100%;
+}
+
+#materialContainer table, #materialContainer td, #materialContainer th {
+    border: 3px solid #0099cc;
+    background: #ace7f2;
+}
+
+#materialContainer td, #materialContainer th {
+    padding: 3px;
+}
+
+#materialContainer td:first-child {
+    font-weight: bold;
+}
+
+/* Добавление материалов */
+
+.addmaterial-table {
+    border: 3px solid #0099cc;
+    background: #ace7f2;
+    width: 50%;
+    padding: 3px;
+}
+
+.addmaterial-table td {
+    padding: 3px;
+}
+
+.addmaterial-table td:first-child {
+    width: 25%;
+    text-align: right;
+}
+
+.addmaterial-table td.material-submit {
+    text-align: center;
+}
+
+.addmaterial-table input[type="text"] {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.addmaterial-table #Label_Message_Box {
+    color: #db2f2f;
+    font-weight: bold;
+}
+
+/* Список оптовиков */
+.wholesalers-prof-pic {
+    max-width: 100px;
+    height: auto;
+}
+
+.wholesalers-container table {
+    width: 100%;
+}
+
+.wholesalers-container table td:first-child {
+    width: 5%;
+}
+
+.wholesalers-add-table {
+    border: 3px solid #0099cc;
+    background: #ace7f2;
+    width: 50%;
+    padding: 3px;
+}
+
+.wholesalers-add-table td {
+    padding: 3px;
+}
+
+.wholesalers-add-table td:first-child {
+    width: 27%;
+    text-align: right;
+}
+
+.wholesalers-add-table td.user-submit {
+    text-align: center;
+}
+
+.wholesalers-add-table input[type="text"], .wholesalers-add-table input[type="password"] {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.wholesalers-add-table #Label_Message_Box {
+    color: #db2f2f;
+    font-weight: bold;
+}
+
+/* Страница отгрузки материалов */
+.ship-row-zero {
+    color: red;
+}
+
+.ship-row-zero td:last-child {
+    font-weight: bold;
+}
+
+
+.ship-material-table {
+    border: 3px solid #0099cc;
+    background: #ace7f2;
+    width: 50%;
+    padding: 3px;
+}
+
+.ship-material-table td {
+    padding: 3px;
+}
+
+.ship-material-table td:first-child {
+    width: 18%;
+    text-align: right;
+}
+
+.ship-material-table td.material-submit {
+    text-align: center;
+}
+
+.ship-material-table input[type="text"], .ship-material-table select {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.ship-material-table #Label_Message_Box {
+    color: #db2f2f;
+    font-weight: bold;
+}
+
+/* Страница приемки материалов */
+.accept-material-table td:first-child {
+    width: 13%;
+    text-align: right;
+}
+
+.accept-material-table td.material-submit {
+    text-align: center;
+}
+
+/* Страница выгрузки архива */
+.archive-table {
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+.archive-table td:first-child {
+    width: 30%;
+    text-align: center;
+}
+
+.archive-table input[type="text"], .archive-table input[type="submit"] {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.archive-error-box {
+    border: 3px solid #0099cc;
+    background: #ace7f2;
+    padding: 5px;
+    width: 100%;
+    text-align: center;
+}
+
+.archive-error {
+    color: #db2f2f;
+    font-weight: bold;
+}
